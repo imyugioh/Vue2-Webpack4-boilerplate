@@ -58,7 +58,13 @@ const webpackConfig = {
   plugins: [
     new VueLoaderPlugin(),
     new CopyWebpackPlugin({
-      patterns: [{ from: helpers.root("src", "static"), to: "./" }],
+      patterns: [
+        {
+          from: helpers.root("src", "static"),
+          to: "./",
+          noErrorOnMissing: true,
+        },
+      ],
     }),
     new HtmlPlugin({ template: "index.html" }),
   ],
