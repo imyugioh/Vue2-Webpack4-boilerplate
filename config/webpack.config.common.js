@@ -6,7 +6,6 @@ const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
 const helpers = require("./helpers");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const isDev = process.env.NODE_ENV === "development";
-console.log(helpers.root("src", "static"));
 const webpackConfig = {
   entry: {
     polyfill: "@babel/polyfill",
